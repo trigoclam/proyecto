@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículo 2 - Tendencias de Salud y Bienestar</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <nav class="navbar">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="MULTIMEDIA/logo.png" alt="Logo de empresa">
+                </a>
+                        </div>
+            <div class="menu">
+                <button class="menu-btn">Menú</button>
+                <ul class="dropdown">
+                    <li><a href="articulo1.html">Página 1</a></li>
+                    <li><a href="articulo2.html">Página 2</a></li>
+                    <li><a href="articulo3.html">Página 3</a></li>
+                    <li><a href="formularioArt.html">Añade un artículo</a></li>
+                </ul>
+            </div>
+            
+            <div class="auth-buttons">
+                <a href="login.html" class="auth-btn">Iniciar sesión</a>
+                <a href="register.html" class="auth-btn">Registrarse</a>
+                </div>
+    </nav>
+    <div class="content">
+        <h1>Tendencias de Salud y Bienestar en 2024</h1>
+        <img src="MULTIMEDIA/articulo_2.png" alt="Salud y Bienestar">
+        <p>En 2024, el enfoque en salud y bienestar ha tomado nuevas direcciones, con una creciente popularidad de prácticas de autocuidado y tecnología portátil de monitoreo de salud.</p>
+        <p>El mercado de dispositivos wearables, como relojes inteligentes y anillos de actividad, está en auge, permitiendo a los usuarios controlar sus signos vitales y recibir alertas sobre su estado de salud en tiempo real.</p>
+        <p>Otro aspecto relevante ha sido el auge de la nutrición personalizada. Con el análisis de ADN y microbioma, ahora es posible adaptar planes de alimentación a las necesidades específicas de cada individuo, potenciando resultados de salud.</p>
+        <p>Estas innovaciones están ayudando a más personas a tomar decisiones informadas y proactivas sobre su bienestar.</p>
+    </div>
+    <div class="comments-section">
+        <h3>Comentarios</h3>
+        <div id="comments-list">
+        </div>
+        <h4>Agregar un comentario</h4>
+        <form id="commentForm">
+            <textarea name="comment" placeholder="Escribe tu comentario..." required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    
+    <footer style="background-color: #333; color: white; padding: 20px; text-align: center;">
+        <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+            <!-- Redes Sociales -->
+            <div>
+                <h4>Síguenos en nuestras redes sociales</h4>
+                <br>
+                <a href="https://facebook.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: white;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width: 30px; vertical-align: middle;">
+                    Facebook
+                </a>
+                <a href="https://twitter.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: white;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" style="width: 30px; vertical-align: middle;">
+                    Twitter
+                </a>
+                <a href="https://instagram.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: white;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" style="width: 30px; vertical-align: middle;">
+                    Instagram
+                </a>
+            </div>
+    
+            <!-- Información adicional -->
+            <div style="margin-top: 20px;">
+                <h4>Contacto</h4>
+                <p>Email: fmesasc@miweb.com</p>
+                <p>Teléfono: +34 600 123 456</p>
+            </div>
+        </div>
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', function () {
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

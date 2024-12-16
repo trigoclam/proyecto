@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículo 1 - Innovaciones Tecnológicas</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html">
+                <img src="MULTIMEDIA/logo.png" alt="Logo de empresa">
+            </a>
+                    </div>
+        <div class="menu">
+            <button class="menu-btn">Menú</button>
+            <ul class="dropdown">
+                <li><a href="articulo1.html">Página 1</a></li>
+                <li><a href="articulo2.html">Página 2</a></li>
+                <li><a href="articulo3.html">Página 3</a></li>
+                <li><a href="formularioArt.html">Añade un artículo</a></li>
+            </ul>
+        </div>
+
+        <div class="auth-buttons">
+            <a href="login.html" class="auth-btn">Iniciar sesión</a>
+            <a href="register.html" class="auth-btn">Registrarse</a>
+            </div>
+</nav>
+    <div class="content">
+        <h1>Innovaciones Tecnológicas en 2024</h1>
+        <img src="MULTIMEDIA/articulo_1.jfif" alt="Innovaciones">
+        <p>La tecnología ha avanzado a un ritmo acelerado en 2024, con innovaciones que están cambiando la forma en que vivimos y trabajamos. Desde la inteligencia artificial aplicada en medicina hasta avances en energías renovables, este año ha marcado hitos importantes.</p>
+        <p>Uno de los temas destacados ha sido la aplicación de inteligencia artificial en diagnóstico médico, ayudando a profesionales de la salud a identificar enfermedades con mayor precisión y en menor tiempo.</p>
+        <p>Además, la energía solar ha alcanzado niveles de eficiencia sin precedentes, lo cual representa una esperanza para reducir nuestra dependencia de combustibles fósiles. Empresas de tecnología están invirtiendo en investigación para optimizar estos sistemas y hacerlos más accesibles.</p>
+        <p>Con todos estos avances, es evidente que el 2024 será recordado como un año clave en la evolución de la tecnología.</p>
+    </div>
+    <div class="comments-section">
+        <h3>Comentarios</h3>
+        <div id="comments-list">
+        </div>
+        <h4>Agregar un comentario</h4>
+        <form id="commentForm" onsubmit="enviarComentario(event, 1)">
+            <textarea name="comment" placeholder="Escribe tu comentario..." required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        
+    </div>
+    
+    <footer style="background-color: #333; color: white; padding: 20px; text-align: center;">
+        <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+            <!-- Redes Sociales -->
+            <div>
+                <h4>Síguenos en nuestras redes sociales</h4>
+                <br>
+                <a href="https://facebook.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: white;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width: 30px; vertical-align: middle;">
+                    Facebook
+                </a>
+                <a href="https://twitter.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: white;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" style="width: 30px; vertical-align: middle;">
+                    Twitter
+                </a>
+                <a href="https://instagram.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: white;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" style="width: 30px; vertical-align: middle;">
+                    Instagram
+                </a>
+            </div>
+    
+            <!-- Información adicional -->
+            <div style="margin-top: 20px;">
+                <h4>Contacto</h4>
+                <p>Email: fmesasc@miweb.com</p>
+                <p>Teléfono: +34 600 123 456</p>
+            </div>
+        </div>
+</div>
+
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', function () {
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.classList.toggle('show');
+        });
+
+       
+    </script>
+</body>
+</html>

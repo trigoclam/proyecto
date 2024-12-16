@@ -1,0 +1,376 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 60px; /* Evitar que el contenido quede detrás de la barra de navegación */
+    background-color: #f4f4f4;
+}
+
+/* Barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 40px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    width: 50px; 
+}
+
+.menu {
+    margin-left: 45px; /* Espacio a la derecha del logo */
+    position: relative;
+}
+
+.menu-btn {
+    background-color: #666;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.menu-btn:hover {
+    background-color: #555;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    width: 100px;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.dropdown li {
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown li:hover {
+    background-color: #555;
+}
+
+.show {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos de la barra de búsqueda */
+.search-bar {
+    margin-left: auto; 
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    background-color: #666;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+
+/* Estilos del contenedor de artículos */
+
+/* Contenedor de las tarjetas de artículos */
+.articles-container {
+    display: flex;
+    flex-wrap: nowrap; /* Mantiene las tarjetas en una fila horizontal */
+    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px;
+    width: 100%; /* Ocupa el 100% del ancho de la pantalla */
+    margin: 0; /* Elimina los márgenes automáticos */
+    align-items: center; /* Centra verticalmente las tarjetas dentro del contenedor */
+    background-color: transparent; /* Elimina el fondo blanco */
+    box-shadow: none; /* Elimina la sombra */
+}
+.articles-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px;
+    width: 100%; /* Ocupa el 100% del ancho de la pantalla */
+    margin: 0 auto; /* Elimina los márgenes automáticos */
+    align-items: center; /* Centra verticalmente las tarjetas dentro del contenedor */
+   
+}
+
+/* Estilos generales para cada tarjeta de artículo */
+.article-card {
+    flex: 0 0 350px; /* Ancho fijo para cada tarjeta */
+    max-width: 350px; /* Limita el ancho de cada tarjeta */
+    padding: 50px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease;
+}
+
+
+
+
+.article-card img {
+    width: 100%;
+    height: 200px; /* Uniformidad en la altura de las imágenes */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.article-card h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 15px 0;
+}
+
+.article-card p {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0 15px;
+}
+
+.article-card a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.article-card a:hover {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+/* Estilo especial para la tarjeta central */
+.article-card.central {
+    transform: scale(1.1); /* Aumentar el tamaño de la tarjeta central */
+}
+
+/* Botones de navegación */
+.nav-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.nav-button.left {
+    left: 20px;
+}
+
+.nav-button.right {
+    right: 20px;
+}
+
+.nav-button:hover {
+    background-color: #555;
+}
+
+/* Estilos para el contenido detallado de los artículos */
+.content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Título del artículo */
+.content h1 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Imagen del artículo */
+.content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* Párrafos del artículo */
+.content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+/* Estilos para la sección de comentarios */
+.comments-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#comments-list {
+    margin-top: 20px;
+}
+
+.comment {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.comment strong {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.comment-meta {
+    font-size: 0.9em;
+    color: #999;
+}
+
+/* Estilos para el formulario de agregar comentarios */
+.comment-form {
+    margin-top: 30px;
+}
+
+.comment-form h4 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#commentForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    min-height: 80px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+#commentForm button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#commentForm button:hover {
+    background-color: #555;
+}
+
+/* Contenedor de los botones de autenticación */
+.auth-buttons {
+    display: flex;
+    gap: 8px;
+    margin-left: 595px; /* Espacio entre los botones de autenticación y la barra de búsqueda */
+}
+
+/* Estilos para los botones de autenticación */
+.auth-btn {
+    background-color: #777; /* Gris */
+    color: white;
+    padding: 5px 10px; /* Tamaño reducido */
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em; /* Tamaño de texto más pequeño */
+    transition: background-color 0.3s;
+}
+
+.auth-btn:hover {
+    background-color: #555; /* Gris más oscuro al pasar el ratón */
+}

@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME - </title>
+    <link rel="stylesheet" href="css.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html">
+                <img src="MULTIMEDIA/logo.png" alt="Logo de empresa">
+            </a>
+                    </div>
+        <div class="menu">
+            <button class="menu-btn">Menú</button>
+            <ul class="dropdown">
+                <li><a href="articulo1.html">Página 1</a></li>
+                <li><a href="articulo2.html">Página 2</a></li>
+                <li><a href="articulo3.html">Página 3</a></li>
+                <li><a href="formularioArt.html">Añade un artículo</a></li>
+            </ul>
+        </div>
+
+        <div class="auth-buttons">
+            <a href="login.html" class="auth-btn">Iniciar sesión</a>
+            <a href="register.html" class="auth-btn">Registrarse</a>
+            </div>
+
+    </form>
+        </div>
+    </nav>
+
+    <div class="content">
+
+        <h2>Añadir Nuevo Artículo</h2>
+        
+        <form action="procesar_articulo.php" method="POST" enctype="multipart/form-data">
+
+            <label for="titulo">Título:</label><br>
+            <input type="text" id="titulo" name="titulo" required><br><br>
+    
+            <label for="autor">Autor:</label><br>
+            <input type="text" id="autor" name="autor" required><br><br>
+    
+            <label for="contenido">Contenido:</label><br>
+            <textarea id="contenido" name="contenido" rows="5" required></textarea><br><br>
+    
+            <label for="foto">Foto:</label><br>
+            <input type="file" id="foto" name="foto" accept="image/*"><br><br>
+    
+            <button type="submit">Añadir Artículo</button>
+            <br>
+        </form>
+        <br>
+
+    <script src="js.js"></script>
+
+    
+    <footer style="background-color: #333; color: white; padding: 20px; text-align: center;">
+        <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">                
+        </div>
+        <div>
+            <h4>Síguenos en nuestras redes sociales</h4>
+            <br>
+            <a href="https://facebook.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: white;">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width: 30px; vertical-align: middle;">
+                Facebook
+            </a>
+            <a href="https://twitter.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: white;">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" style="width: 30px; vertical-align: middle;">
+                Twitter
+            </a>
+            <a href="https://instagram.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: white;">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" style="width: 30px; vertical-align: middle;">
+                Instagram
+            </a>
+        </div>
+
+        <!-- Información adicional -->
+        <div style="margin-top: 20px;">
+            <h4>Contacto</h4>
+            <p>Email: fmesasc@miweb.com</p>
+            <p>Teléfono: +34 600 123 456</p>
+        </div>
+</body>
+</html>

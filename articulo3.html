@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículo 3 - Cambios en el Medio Ambiente</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html">
+                <img src="MULTIMEDIA/logo.png" alt="Logo de empresa">
+            </a>
+                    </div>
+        <div class="menu">
+            <button class="menu-btn">Menú</button>
+            <ul class="dropdown">
+                <li><a href="articulo1.html">Página 1</a></li>
+                <li><a href="articulo2.html">Página 2</a></li>
+                <li><a href="articulo3.html">Página 3</a></li>
+                <li><a href="formularioArt.html">Añade un artículo</a></li>
+            </ul>
+        </div>
+
+        <div class="auth-buttons">
+            <a href="login.html" class="auth-btn">Iniciar sesión</a>
+            <a href="register.html" class="auth-btn">Registrarse</a>
+            </div>
+    </nav>
+    <div class="content">
+        <h1>Cambios Climáticos y Medio Ambiente en 2024</h1>
+        <img src="MULTIMEDIA/articulo_3.jfif" alt="Medio Ambiente">
+        <p>El medio ambiente sigue siendo un tema crucial en la agenda global de 2024. Los efectos del cambio climático son cada vez más evidentes, lo cual ha llevado a países y empresas a redoblar sus esfuerzos para mitigar su impacto.</p>
+        <p>Iniciativas de reforestación masiva y la transición hacia una economía circular son solo algunas de las estrategias adoptadas para reducir emisiones y fomentar la sostenibilidad.</p>
+        <p>Además, la concienciación sobre la conservación de la biodiversidad ha crecido, promoviendo acciones que buscan proteger ecosistemas frágiles y especies en peligro de extinción.</p>
+        <p>Con un esfuerzo conjunto, hay esperanza para ver mejoras en nuestro entorno, lo que permitirá un futuro más verde y sostenible.</p>
+    </div>
+    <div class="comments-section">
+        <h3>Comentarios</h3>
+        <div id="comments-list">
+        </div>
+        <h4>Agregar un comentario</h4>
+        <form id="commentForm">
+            <textarea name="comment" placeholder="Escribe tu comentario..." required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    
+    <footer style="background-color: #333; color: white; padding: 20px; text-align: center;">
+        <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+            <!-- Redes Sociales -->
+            <div>
+                <h4>Síguenos en nuestras redes sociales</h4>
+                <br>
+                <a href="https://facebook.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: white;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width: 30px; vertical-align: middle;">
+                    Facebook
+                </a>
+                <a href="https://twitter.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: white;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" style="width: 30px; vertical-align: middle;">
+                    Twitter
+                </a>
+                <a href="https://instagram.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: white;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" style="width: 30px; vertical-align: middle;">
+                    Instagram
+                </a>
+            </div>
+    
+            <!-- Información adicional -->
+            <div style="margin-top: 20px;">
+                <h4>Contacto</h4>
+                <p>Email: fmesasc@miweb.com</p>
+                <p>Teléfono: +34 600 123 456</p>
+            </div>
+        </div>
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', function () {
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
