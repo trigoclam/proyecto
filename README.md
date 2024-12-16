@@ -1,4 +1,13 @@
-Oscar: En la semana uno cumplimos con todo lo que se pedia.
+<VirtualHost *:80>
+    ServerName proyecto.com
+    DocumentRoot /var/www/proyecto.com
 
-En la semana dos nos ha faltado implememtar la busqueda (que estamos en ello), y el tema paginacion y conexion con bases de datos.
-El resto esta hecho.
+    <Directory /var/www/proyecto.com>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/proyecto_error.log
+    CustomLog ${APACHE_LOG_DIR}/proyecto_access.log combined
+</VirtualHost>
